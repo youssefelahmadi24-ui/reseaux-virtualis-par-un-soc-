@@ -25,8 +25,7 @@ L'infrastructure est entièrement virtualisée sur un hyperviseur **Proxmox VE**
 * Serveur SOC -> Centralise les métriques de performance et supervise l'activité
 * Client LAN -> Machine utilisateur standard pour les accès légitimes
 
-![Architecture SOC](./architecture-soc.jpeg)
-
+![Architecture SOC](architecture-soc.jpeg)
 ---
 
 ## 🌐 Plan d'Adressage IP & Segmentation
