@@ -22,8 +22,10 @@ L'infrastructure est entièrement virtualisée sur un hyperviseur **Proxmox VE**
 - **Attaquant Extérieur** (VMware / Kali Linux) ➔ Attaque le **WAN** (pfSense)
 - **pfSense** ➔ Filtre et distribue les flux vers le **LAN**, la **DMZ** et le **SOC**
 - **Serveur DMZ** ➔ Héberge un serveur web Apache surveillé
-- **Serveur SOC** ➔ Centralise les métriques de performance et supervise l'activité
-- **Client LAN** ➔ Machine utilisateur standard pour les accès légitimes
+* Serveur SOC -> Centralise les métriques de performance et supervise l'activité
+* Client LAN -> Machine utilisateur standard pour les accès légitimes
+
+![Architecture SOC](./architecture-soc.jpeg)
 
 ---
 
