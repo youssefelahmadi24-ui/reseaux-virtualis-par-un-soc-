@@ -3,14 +3,14 @@
 Ce projet présente la mise en œuvre d'une architecture réseau sécurisée et d'un mini Security Operations Center (SOC) virtualisés sous l'hyperviseur **Proxmox VE**. L'objectif est de segmenter les flux réseau à l'aide d'un pare-feu virtuel (**pfSense**), d'héberger des services exposés et internes, et de mettre en place une solution de supervision en temps réel (**Netdata**) ainsi qu'une protection active (**Fail2ban**) contre les attaques simulées depuis une machine externe (**Kali Linux**).
 
 ---
-
 ## 📋 Table des Matières
-1. [Aperçu de l'Architecture](#-aperçu-de-larchitecture)
-2. [Plan d'Adressage IP & Segmentation](#-plan-dadressage-ip--segmentation)
-3. [Rôles et Services des Composants](#-rôles-et-services-des-composants)
-4. [Flux Réseau et Communications](#-flux-réseau-et-communications)
-5. [Scénarios de Sécurité et Simulation d'Attaque](#-scénarios-de-sécurité-et-simulation-dattaque)
-6. [Notes de Configuration & Bonnes Pratiques](#-notes-de-configuration--bonnes-pratiques)
+
+1. 🔍 [Aperçu de l'Architecture](#-aperçu-de-larchitecture)
+2. 🗺️ [Plan d'Adressage IP & Segmentation](#-plan-dadressage-ip--segmentation)
+3. ⚙️ [Rôles et Services des Composants](#-rôles-et-services-des-composants)
+4. 🔄 [Flux Réseau et Communications](#-flux-réseau-et-communications)
+5. 🛡️ [Scénarios de Sécurité et Simulation d'Attaque](#-scénarios-de-sécurité-et-simulation-dattaque)
+6. 💡 [Notes de Configuration & Bonnes Pratiques](#-notes-de-configuration--bonnes-pratiques)
 
 ---
 
@@ -19,11 +19,13 @@ Ce projet présente la mise en œuvre d'une architecture réseau sécurisée et 
 L'infrastructure est entièrement virtualisée sur un hyperviseur **Proxmox VE** (IP : `192.168.6.136`). Le cœur du routage et de la sécurité est confié à une machine virtuelle **pfSense** qui interconnecte quatre zones distinctes (WAN, LAN, DMZ, SOC).
 
 ### Schéma Conceptuel
-- **Attaquant Extérieur** (VMware / Kali Linux) ➔ Attaque le **WAN** (pfSense)
-- **pfSense** ➔ Filtre et distribue les flux vers le **LAN**, la **DMZ** et le **SOC**
-- **Serveur DMZ** ➔ Héberge un serveur web Apache surveillé
-* Serveur SOC -> Centralise les métriques de performance et supervise l'activité
-* Client LAN -> Machine utilisateur standard pour les accès légitimes
+
+* **Attaquant Extérieur** (VMware / Kali Linux) → Attaque le **WAN** (pfSense)
+* **pfSense** → Filtre et distribue les flux vers le **LAN**, la **DMZ** et le **SOC**
+* **Serveur DMZ** → Héberge un serveur web Apache surveillé
+* **Serveur SOC** → Centralise les métriques de performance et supervise l'activité
+* **Client LAN** → Machine utilisateur standard pour les accès légitimes
+
 
 ![Architecture SOC](architecture-soc.jpeg)
 ---
