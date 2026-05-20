@@ -1,8 +1,4 @@
 # Architecture SOC et Segmentation Réseau sur Proxmox VE
-
-<<<<<<< HEAD
-***Ce projet présente la mise en œuvre d'une architecture réseau sécurisée et d'un mini Security Operations Center (SOC) virtualisés sous l'hyperviseur **Proxmox VE**. L'objectif est de segmenter les flux réseau à l'aide d'un pare-feu virtuel (**pfSense**), d'héberger des services exposés et internes, et de mettre en place une solution de supervision en temps réel (**Netdata**) ainsi qu'une protection active (**Fail2ban**) contre les attaques simulées depuis une machine externe (**Kali Linux**)***.
-=======
 Ce projet présente la mise en œuvre d'une architecture réseau sécurisée et d'un mini Security Operations Center (SOC) virtualisé sous l'hyperviseur **Proxmox VE**. L'objectif est de segmenter les flux réseau à l'aide d'un pare-feu virtuel (**pfSense**), d'héberger des services exposés et internes, et de mettre en place une solution de supervision en temps réel (**Netdata**) ainsi qu'une protection active (**Fail2ban**) contre les attaques simulées depuis une machine externe (**Kali Linux**).
 
 ## 🔍 Aperçu de l'Architecture
