@@ -1,0 +1,21 @@
+# Protection contre les échecs d'authentification (.htaccess / HTTP Basic Auth)
+[apache-auth]
+enabled  = true
+port     = http,https
+logpath  = %(apache_error_log)s
+maxretry = 3
+
+# Protection contre les robots malveillants et les scripts automatiques
+[apache-badbots]
+enabled  = true
+port     = http,https
+logpath  = %(apache_access_log)s
+bantime  = 48h
+maxretry = 1
+
+# Protection contre la recherche de failles (ex: requêtes HTTP 404 en masse)
+[apache-noscript]
+enabled  = true
+port     = http,https
+logpath  = %(apache_error_log)s
+maxretry = 3

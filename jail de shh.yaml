@@ -1,0 +1,27 @@
+[DEFAULT]
+# Adresses IP à ignorer (votre IP fixe, le réseau local, etc.)
+ignoreip = 127.0.0.1/8 ::1 192.168.1.100
+
+# Temps de bannissement (ex: 1h). 'm' pour minutes, 'h' pour heures, 'd' pour jours.
+bantime  = 1h
+
+# Fenêtre de temps pendant laquelle les tentatives échouées sont comptabilisées
+findtime = 10m
+
+# Nombre maximum de tentatives échouées avant le bannissement
+maxretry = 5
+
+# Méthode de bannissement (iptables, nftables, ufw...)
+banaction = iptables-multiport
+
+# --- CONFIGURATION DES PRISONS VRAIMENT ACTIVÉES ---
+
+[sshd]
+# Active explicitement la prison pour SSH
+enabled = true
+port    = ssh
+logpath = %(sshd_log)s
+backend = %(sshd_backend)s
+# On peut surcharger les valeurs par défaut spécifiquement pour SSH :
+maxretry = 3
+bantime  = 2h
