@@ -1,0 +1,4 @@
+[stream]
+    enabled = yes
+    destination = 192.168.30.10:19999
+    api key = XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
