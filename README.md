@@ -4,8 +4,6 @@
 ***Ce projet présente la mise en œuvre d'une architecture réseau sécurisée et d'un mini Security Operations Center (SOC) virtualisés sous l'hyperviseur **Proxmox VE**. L'objectif est de segmenter les flux réseau à l'aide d'un pare-feu virtuel (**pfSense**), d'héberger des services exposés et internes, et de mettre en place une solution de supervision en temps réel (**Netdata**) ainsi qu'une protection active (**Fail2ban**) contre les attaques simulées depuis une machine externe (**Kali Linux**)***.
 =======
 Ce projet présente la mise en œuvre d'une architecture réseau sécurisée et d'un mini Security Operations Center (SOC) virtualisé sous l'hyperviseur **Proxmox VE**. L'objectif est de segmenter les flux réseau à l'aide d'un pare-feu virtuel (**pfSense**), d'héberger des services exposés et internes, et de mettre en place une solution de supervision en temps réel (**Netdata**) ainsi qu'une protection active (**Fail2ban**) contre les attaques simulées depuis une machine externe (**Kali Linux**).
->>>>>>> a59e1ba74c9e54bf819ce00e6cec0ac9b1f432de
----
 
 ## 🔍 Aperçu de l'Architecture
 
