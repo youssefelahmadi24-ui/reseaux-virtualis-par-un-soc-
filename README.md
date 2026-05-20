@@ -106,6 +106,8 @@ The entire infrastructure is virtualized on a **Proxmox VE** hypervisor (Host IP
 * **SOC Server** → Centralizes performance metrics and oversees operational activity.
 * **LAN Client** → Represents a standard internal user workstation for legitimate access.
 
+  ![Architecture SOC](architecture-soc.jpeg)
+
 ---
 
 ## 🌐 IP Addressing Plan & Segmentation
